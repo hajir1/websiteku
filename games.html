@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>websiteku</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+       
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&display=swap" rel="stylesheet">
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="style.css" rel="stylesheet">
+        <style>
+            h2{
+                font-family: sans-serif;
+                color: black;
+                position: relative;
+                top: 20px;
+                right:-10px;
+                font-weight: bold;
+            }
+            p{
+                font-family: sans-serif;
+                color: black;
+                font-size: 20px;
+                position: relative;
+                top: 20px;
+                right:-10px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>game tembak burung</h2>
+        <p>total waktu:<span id="totalwaktu"></span></p>
+        <img id="bird">
+
+        <script type="text/javascript">
+
+            var counter=1;
+            var start="";
+            var end="";
+            var totalwaktu="";
+           
+            
+
+            //tampilkan gambar burung
+            
+          
+
+
+            tampilkan();
+            function tampilkan (){
+                var bottom=Math.random() *350;
+                var left=Math.random() *200;
+                start= new Date().getTime();
+                document.getElementById("bird").src="img/images.jpeg"
+                document.getElementById("bird").style.height = 60 + "px";
+                document.getElementById("bird").style.width = 60 + "px";
+                document.getElementById("bird").style.top = bottom +  "px";
+                document.getElementById("bird").style.left = left +  "px";
+                document.getElementById("bird").style.position = "relative";
+                document.getElementById("bird").style.display = "block";
+                
+            }
+
+            //onclick gambar menjadi boom
+            end = new Date().getTime();
+            document.getElementById("bird").onclick = function(){
+                document.getElementById("bird").src="img/download.png";
+                document.getElementById("bird").style.height = 100 + "px";
+                document.getElementById("bird").style.width = 100 + "px";
+                setTimeout(sembunyikan,100);
+                
+                
+            //setelah 10 tembakan allert selesai,hitung total waktu dan tampilan
+           
+                if(counter<=20){
+                    setTimeout(tampilkan,100);
+                    counter++;
+                   
+                    
+                }else{
+                    alert("selesai");
+                  
+                    totalwaktu=(start- end)/1000;
+                   
+                  
+                    document.getElementById("totalwaktu").innerHTML=totalwaktu + "s";
+                    if(totalwaktu<=14){
+                        alert("anda hebat total waktu kurang 18 detik");
+                    }else{
+                        alert("yahhh , skill perlu ditingkatkan")
+                    }
+                }
+                }
+                function sembunyikan(){
+                document.getElementById("bird").style.display = "none";
+                }
+
+                var code="a";
+            if(code=="a"){
+            alert("uji kecepatan anda");
+            }
+
+        </script>
+    </body>

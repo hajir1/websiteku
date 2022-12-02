@@ -1,0 +1,106 @@
+body {
+    color: #666666;
+    background: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+h1,
+h2, 
+h3, 
+h4,
+h5, 
+h6 {
+    font-weight: 100;
+}
+
+a{
+        color:black;
+        transition: .3s;
+    }
+    
+    a:hover,
+    a:active,
+    a:focus {
+        color:black;
+        outline: none;
+        text-decoration: none;
+}
+
+.navbar{
+    background:aqua;
+    height:300px;
+    display: grid;
+    grid-template-columns: (auto-fit, minmax(100px, 1fr));
+    left:100px;
+    padding:5px;
+    
+}
+.input {
+    border-radius:5px;
+    text-align: center;
+    padding:5px 15px;
+    position: relative;
+    height: 30px;
+    top:20px;
+    float: none;
+    cursor: pointer;
+    color:black;
+    background: white;
+
+}
+.button{
+    border-radius:5px;
+    text-align: center;
+    padding:10px, 15px;
+    cursor: pointer;
+    position:relative;
+    top: 60px;
+    float: none;
+    background:white;
+    color:black;
+    height: 50px;
+    width: 50;
+}
+.button:hover{
+    color:#ffffff;
+    background:black;
+
+}
+
+
+.cursor a{
+    text-align:center;
+    display:grid;
+    background:black;
+    color:aliceblue;
+    margin:10px;
+    padding:30px, 10px;
+    padding-top: 18px;
+    height:60px;
+    width: 170px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    grid-template-columns: (auto-fit, minmax(100px, 1fr));
+}
+
+.cursor a:hover{
+    color:black;
+    background:aqua;
+}
+
+.new-new{
+    color:black;
+    position: relative;
+    left:43px;
+    font-weight: bold;
+    top:-37px;
+
+}
+.new-icon{
+    margin-bottom: 0px;
+    width: 40px;
+    height: 40px;
+    padding: auto;
+}
