@@ -104,3 +104,30 @@ a{
     height: 40px;
     padding: auto;
 }
+.material-icons,
+.see{
+    position: relative;
+    top: 4px;
+}
+
+.darkmode{
+    background:black;
+    border-radius: 10px;
+    position:relative;
+    top:-45px;
+    left:180px;
+    height: 35px;
+    width: 70px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+.material-icons,
+.dark{
+    margin-left: 3px;
+    padding: auto;
+    
+}
+.arema{
+    background: black;
+    color:#ffffff
+}
