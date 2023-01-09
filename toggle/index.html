@@ -14,10 +14,6 @@
     <link rel="stylesheet" href="../style.css">
     <style>
 
-        #darkmode{
-          background: black;
-          color :white;
-        }
 
         a{
       position: relative;
@@ -71,10 +67,14 @@
             <a class="see" href="../setting.html"><span class="material-icons">&#xe8b8</span> Settings</a>
             <div class="darkmode">
                   <div class="dark">
-              <span class="material-icons"  onclick="setdarkmode(false)">&#xe3a9</span>
+              <span class="material-icons"  >&#xe3a9</span>
                   
-              <span class="material-icons"  onclick="setdarkmode(true)">&#xe3a7</span>
+              <span class="material-icons" >&#xe3a7</span>
                 </div>
+
+              <div class="toggle-container"></div>
+              <input type="checkbox" id="toogle" nama="toogle"></input>
+              
           </li>
           <li>
             <a class="see"href="../about.html"><span class="material-icons">&#xe88f</span> Information</a>
@@ -87,6 +87,8 @@
       <div id="content" class="p-4 p-md-5 pt-5">
         <h2 class="mb-4">Homepage</h2>
               <div class="slider">
+                <div id="waktu"></div>
+                <div id="tim"></div>
               <video loop autoplay muted width="100%"height="100%" id="video">
                   <source src="../img/video_20221204_062001_edit.mp4" type="video/mp4">
                           Your browser does not support the video tag.
@@ -100,8 +102,46 @@
     <script src="js/popper.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="darkmode.js"></script>
-      
+    <script src="../darkmode.js"></script>
+      <script type="text/javascript">
+        const f=confirm("selamat datang di website ini")
+
+
+if(f){
+const d=prompt("MASUKKAN NAMA ANDA(OPSIONAL)");
+document.writeln(`<p style="color:black;top:1%; font-size:200%;position:absolute;left:50%;margin:0%;
+ transform:translateX(-50);font-weight:bold;
+ ">HALO  ${d}&nbsp<p/>`)
+
+setInterval(()=>{
+  const waktu= new Date();
+ const jam = waktu.getHours();
+  const menit = waktu.getMinutes();
+  const detik = waktu.getSeconds();
+document.getElementById('waktu').innerHTML=jam + " : " + menit +" : " + detik;
+
+},1000)
+
+
+setInterval(()=>{
+const tim= new Date();
+
+const tahun=tim.getFullYear();
+const month = tim.getMonth();
+const months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+const hari=tim.getDay();
+var days = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+
+document.getElementById('tim').innerHTML=(days[hari]) + "- " +
+ (months[month]) + " - " + tahun;
+},1000)
+
+
+
+}else{
+  alert("bye bye , selamat melakukan aktifitas")
+}
+      </script>
 
     </body>
 </html>
