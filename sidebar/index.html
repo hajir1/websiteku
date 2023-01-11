@@ -11,14 +11,25 @@
 		<link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+      .dark-mode{
+  background-color: #333;
+  color:#fff;
+}
+.light-mode{
+  background: #fff;
+  color:#333  ;
+}
+    </style>
+
+
   </head>
   <body>
 		
 		<div class="wrapper d-flex align-items-stretch">
 			<nav id="sidebar">
 				<div class="p-4 pt-5">
-		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
+		  		<a href="#" class="img logo rounded-circle mb-5" style="background-image: url(../img/icon.webp);"></a>
 	        <ul class="list-unstyled components mb-5">
 	          <li class="active">
 	            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
@@ -68,13 +79,13 @@
               <i class="fa fa-bars"></i>
               <span class="sr-only">Toggle Menu</span>
             </button>
-
-            <button style="font-size:24px; position:absolute;left: 25%;background: none;border:0;justify-content: center;display: flex;width: 25vh;height: 25vh;top: 27%;"><i class="material-icons">brightness_3</i></button>
-
-            <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            
+           
+            <button   class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" >
               
                 <i class="fa fa-bars"></i>
             </button>
+
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="nav navbar-nav ml-auto">
@@ -88,7 +99,16 @@
                     <a class="nav-link" href="#">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                  <div>  
+                      <a style="margin-bottom: 2px;"class="nav-link" href="#"> DARK MODE
+                      <button id="bukan" style="border:0;justify-content: center;text-align: center;background: none;"><i style="height: 30px;
+                        width: 30px; transform: translateY(7px);" class="material-icons">brightness_3</i></button>
+
+                      <button id="lampu" style="border:0;justify-content: center;text-align: center;background: none;"><i class="material-icons"><i style="height: 30px;
+                        width: 30px; transform: translateY(7px);"  class="material-icons">brightness_4</i></button>
+                    </div>
+
+          </a>
                 </li>
               </ul>
             </div>
@@ -98,7 +118,7 @@
         <h2 class="mb-4">Sidebar #01</h2>
         <p id="tim"></p>
         <p id="waktu"></p>
-
+        
       </div>
 		</div>
 
@@ -107,7 +127,16 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
     <script type="text/javascript">
-     
+      const lampu=document.getElementById('lampu');
+      button.addEventListener('click' ,function(){
+        if(document.body.classList.contains("dark-mode")){
+          document.body.classList.remove("dark-mode");
+        }else{
+          document.writeln("error")
+        }
+      }
+
+      );
     </script>
   </body>
 </html>
